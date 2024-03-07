@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background: url('bg.jpg') center/cover fixed no-repeat;
+        margin: 0;
+        padding-top: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .navbar {
+        background-color: rgba(52, 58, 64, 0.8);
+        padding: 15px;
+        text-align: left;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        margin-left: 15px;
+    }
+
+    .container {
+        margin-top: 70px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h1 {
+        color: #343a40;
+    }
+
+    input {
+        padding: 10px;
+        margin: 10px 0;
+        width: 80%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #343a40;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    li {
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #e6e6e6;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    input[type="date"] {
+        padding: 10px;
+        margin-top: 5px;
+    }
+</style>
+
+    <title>To-Do List</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="project.html">Back to Project</a>
+    </div>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        <input type="date" id="dueDate">
+        <button onclick="addTask()">Add</button>
+        <ul id="taskList"></ul>
+        
+        <script>
+            function addTask() {
+                const taskInput = document.getElementById('taskInput');
+                const dueDateInput = document.getElementById('dueDate');
+                const taskList = document.getElementById('taskList');
+
+                if (taskInput.value.trim() !== '') {
+                    const newTask = document.createElement('li');
+                    const dueDate = dueDateInput.value || 'No due date';
+
+                    newTask.innerHTML = `
+                        <span>${taskInput.value}</span>
+                        <span>${dueDate}</span>
+                        <button onclick="editTask(this)">Edit</button>
+                        <button onclick="removeTask(this)">Remove</button>
+                    `;
+                    taskList.appendChild(newTask);
+                    taskInput.value = '';
+                    dueDateInput.value = '';
+                }
+            }
+
+            function removeTask(button) {
+                const taskList = document.getElementById('taskList');
+                const taskToRemove = button.parentNode;
+                taskList.removeChild(taskToRemove);
+            }
+
+            function editTask(button) {
+                const taskList = document.getElementById('taskList');
+                const taskToEdit = button.parentNode;
+                const taskText = taskToEdit.querySelector('span:first-child').textContent;
+                const dueDate = taskToEdit.querySelector('span:nth-child(2)').textContent;
+
+                const editedTaskText = prompt('Edit task:', taskText);
+                const editedDueDate = prompt('Edit due date:', dueDate);
+
+                if (editedTaskText !== null) {
+                    taskToEdit.querySelector('span:first-child').textContent = editedTaskText;
+                    taskToEdit.querySelector('span:nth-child(2)').textContent = editedDueDate || 'No due date';
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

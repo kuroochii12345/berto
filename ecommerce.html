@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Shopee-like E-Commerce</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+     <style>
+        body {
+            padding-top: 56px;
+            background-image: url('bg.jpg'); /* Specify the path to your background image */
+            background-size: cover;
+            background-position: center;
+            color: #000; /* Set text color to black */
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding-top: 0;
+            }
+        }
+
+        .product-card {
+            margin-bottom: 20px;
+            color: #000; /* Set text color to black */
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .categories {
+            margin-top: 20px;
+            color: #000; /* Set text color to black */
+        }
+
+        /* Transparent Navbar Styles */
+        .navbar {
+            background-color: transparent !important;
+            background-image: none !important; /* Remove background image for the navbar */
+        }
+
+        .navbar-transparent {
+            background-color: transparent !important;
+            box-shadow: none !important;
+            background-image: none !important; /* Remove background image for the navbar */
+        }
+
+        .navbar-light .navbar-brand,
+        .navbar-light .navbar-nav .nav-link {
+            color: #000; /* Set text color to black for navbar links */
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-transparent">
+        <a class="navbar-brand" href="#">Mobile Phone Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showHome()">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showShop()">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showCart()">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="project.html">Project</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4" id="homeSection">
+        <!-- Featured Section -->
+        <div class="jumbotron">
+            <h1 class="display-4">Featured Products</h1><img src="featured.jpg" alt="featured">
+            <p class="lead">Discover our handpicked selection of top-rated products.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button" onclick="showShop()">Explore Featured Products</a>
+        </div>
+
+        <!-- Trending Products Section -->
+        <h4>Trending Products</h4>
+        <div class="card-deck">
+            <div class="card product-card">
+                <img src="iphone15.jpg" alt="iphone15" class="card-img-top product-img">
+                <div class="card-body product-details">
+                    <h5 class="card-title">Iphone 15 Pro Max</h5>
+                    <p class="card-text">5G, 6.7 inches, 110.2 cm2, iOS 17, upgradable to iOS 17.3, 256GB 8GB RAM, 512GB 8GB RAM, 1TB 8GB RAM, Apple A17 Pro, Li-Ion 4441 mAh</p>
+                </div>
+            </div>
+
+            <div class="card product-card">
+                <img src="asus.jpg" alt="asus" class="card-img-top product-img">
+                <div class="card-body product-details">
+                    <h5 class="card-title">Asus ROG 6 Pro</h5>
+                    <p class="card-text">Qualcomm® Snapdragon® 8+ Gen 1, GameCool 6 thermal system, 165 Hz display, S8475 | 18GB RAM | 512GB Storage</p>
+                </div>
+            </div>
+            <div class="card product-card">
+                <img src="nokia.jpg" alt="nokia" class="card-img-top product-img">
+                <div class="card-body product-details">
+                    <h5 class="card-title">Nokia G70 5G</h5>
+                    <p class="card-text">Qualcomm Snapdragon 8 Gen 4,HTML5,10/12GB RAM,128/256 GB, Expandable Storage Upto 512 GB, Rear Camera: Quad 108MP, Front Camera: Single 48MP lenses for capturing selfies and video calls.
+</p>
+                </div>
+            </div>
+            <div class="card product-card">
+                <img src="iphone12.jpg" alt="iphone12" class="card-img-top product-img">
+                <div class="card-body product-details">
+                    <h5 class="card-title">Iphone 12 Pro Max</h5>
+                    <p class="card-text">6.1-inch Super Retina XDR display, A14 Bionic chip, 5G capable,
+                            Ceramic Shield front cover, iOS 15</p>
+                </div>
+            </div>
+            <div class="card product-card">
+                <img src="samsungs21.jpg" alt="samsung" class="card-img-top product-img">
+                <div class="card-body product-details">
+                    <h5 class="card-title">Samsung Galaxy S21</h5>
+                    <p class="card-text">6.2 inches. 2400 x 1080 pixels. 120Hz Refresh rate,12 MP (Triple camera) 10 MP front, Qualcomm Snapdragon 888. 8GB RAM, 128GB, not expandable, 4000 mAh, OS. Android 13. Samsung One UI.</p>
+                </div>
+            </div>
+            <!-- Add more trending product cards as needed -->
+        </div><br>
+                    <div class="card product-card">
+                <img src="rm8.jpg" alt="redmagic" class="card-img-top product-img">
+                <div class="card-body product-details">
+                    <h5 class="card-title">ZTE nubia Red Magic 8 Pro+</h5>
+                    <p class="card-text">Qualcomm SM8550-AB Snapdragon 8 Gen 2, 256GB 12GB RAM, 512GB 16GB RAM, 1TB 16GB RAM, Li-Po 5000 mAh, Android 13, Redmagic OS 6</p>
+                </div>
+            </div>
+                    <div class="card product-card">
+                <img src="vivo.jpg" alt="vivo" class="card-img-top product-img">
+                <div class="card-body product-details">
+                    <h5 class="card-title">Vivo Y200 5G</h5>
+                    <p class="card-text">8/128 GB, Android 13, 5G, Qualcomm Snapdragon 4 Gen 1, Li-Po 4800 mAh, Dual Camera</p>
+                </div>
+            </div>
+                    <div class="card product-card">
+                <img src="gp5.jpg" alt="googlepixel" class="card-img-top product-img">
+                <div class="card-body product-details">
+                    <h5 class="card-title">Google Pixel 5</h5>
+                    <p class="card-text">The phone is powered by the Snapdragon 765G chipset, which supports 5G, 8GB RAM, and 128GB storage. There are a dual-camera setup and a fingerprint on the back. A 6-inch OLED display with a 90Hz</p>
+                </div>
+            </div>
+    </div>
+    
+
+    <!-- Shop Section -->
+    <div class="container mt-4" id="shopSection" style="display: none;">
+        <h1>Shop Section</h1>
+        <div class="mb-3">
+            <!-- Provided product card structure -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="iphone12.jpg" alt="iPhone 12" class="card-img-top product-img">
+                    <div class="card-body product-details">
+                        <h5 class="card-title">iPhone 12</h5>
+                        <p class="card-text">6.1-inch Super Retina XDR display, A14 Bionic chip, 5G capable,
+                            Ceramic Shield front cover, iOS 15</p>
+                        <p class="card-text">$799.99</p>
+                        <button class="btn btn-primary btn-add-to-cart" data-product-id="1"
+        onclick="addToCart('iPhone 12', 799.99, 'iphone12.jpg')">Add to Cart</button>
+
+                    </div> 
+                </div>
+                <div class="card product-card">
+                    <img src="asus.jpg" alt="asus" class="card-img-top product-img">
+                    <div class="card-body product-details">
+                        <h5 class="card-title">Asus ROG 6 Pro</h5>
+                        <p class="card-text">Qualcomm® Snapdragon® 8+ Gen 1, GameCool 6 thermal system, 165 Hz display, S8475 | 18GB RAM | 512GB Storage</p>
+                        <p class="card-text">$599.99</p>
+                        <button class="btn btn-primary btn-add-to-cart" data-product-id="2"
+        onclick="addToCart('Asus ROG 6 Pro', 599.99, 'asus.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card product-card">
+                    <img src="rm8.jpg" alt="redmagic" class="card-img-top product-img">
+                    <div class="card-body product-details">
+                        <h5 class="card-title">ZTE nubia Red Magic 8 Pro+</h5>
+                        <p class="card-text">Qualcomm SM8550-AB Snapdragon 8 Gen 2, 256GB 12GB RAM, 512GB 16GB RAM, 1TB 16GB RAM, Li-Po 5000 mAh, Android 13, Redmagic OS 6</p>
+                        <p class="card-text">$699.99</p>
+                        <button class="btn btn-primary btn-add-to-cart" data-product-id="3"
+        onclick="addToCart('ZTE nubia Red Magic 8 Pro+', 699.99, 'rm8.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product list will be dynamically added here -->
+            
+        </div>
+
+    </div>
+    <!-- Cart Section -->
+<div class="container mt-4" id="cartSection" style="display: none;">
+    <h1>Shopping Cart</h1>
+    <div id="cartContent"></div>
+
+</div>
+
+    <!-- Bootstrap JS and jQuery (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Define a global variable to store added products
+var cartProducts = [];
+
+    function showHome() {
+        document.getElementById("homeSection").style.display = "block";
+        document.getElementById("shopSection").style.display = "none";
+        document.getElementById("cartSection").style.display = "none";
+    }
+
+    function showShop() {
+        document.getElementById("homeSection").style.display = "none";
+        document.getElementById("shopSection").style.display = "block";
+        document.getElementById("cartSection").style.display = "none";
+    }
+
+    function showCart() {
+        document.getElementById("homeSection").style.display = "none";
+        document.getElementById("shopSection").style.display = "none";
+        document.getElementById("cartSection").style.display = "block";
+        displayCartContent();
+    }
+
+function addToCart(productName, productPrice, productImage) {
+    var product = { name: productName, price: productPrice, image: productImage };
+    cartProducts.push(product);
+    alert(`Added ${productName} to the cart. Price: $${productPrice}`);
+}
+
+function displayCartContent() {
+    var cartContent = document.getElementById("cartContent");
+    cartContent.innerHTML = ""; // Clear previous content
+
+    if (cartProducts.length === 0) {
+        cartContent.innerHTML = "Cart is empty.";
+    } else {
+        for (var i = 0; i < cartProducts.length; i++) {
+            var product = cartProducts[i];
+            var productHTML = `
+                <div class="card product-card">
+                    <img src="${product.image}" alt="${product.name}" class="card-img-top product-img">
+                    <div class="card-body product-details">
+                        <h5 class="card-title">${product.name}</h5>
+                        <p class="card-text">Price: $${product.price}</p>
+                        <button class="btn btn-success" onclick="buyProduct(${i})">Buy</button>
+                        <button class="btn btn-danger" onclick="removeProduct(${i})">Remove</button>
+                    </div>
+                </div>
+            `;
+            cartContent.innerHTML += productHTML;
+        }
+    }
+}
+
+
+    function buyProduct(index) {
+        // Implement logic for buying a specific product
+        alert(`Bought ${cartProducts[index].name} for $${cartProducts[index].price}`);
+    }
+
+    function buyProducts() {
+        // Implement logic for buying all products
+        alert("Bought all products!");
+        // You can clear the cartProducts array after successful purchase
+        cartProducts = [];
+        displayCartContent(); // Update the displayed cart content
+    }
+
+    function removeProduct(index) {
+        // Remove a specific product from the cart
+        cartProducts.splice(index, 1);
+        displayCartContent(); // Update the displayed cart content
+    }
+
+    function removeAllProducts() {
+        // Remove all products from the cart
+        cartProducts = [];
+        displayCartContent(); // Update the displayed cart content
+    }
+
+    // Initial state
+    showHome();
+</script>
+
+
+</body>
+
+</html>

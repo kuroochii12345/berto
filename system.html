@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Project - System</title>
+    <link href="bootstrap-5.3.2-dist/css/bootstrap.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
+</head>
+<style>
+    body {
+        background: url('bg.jpg') center/cover fixed no-repeat;
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        background-color: #343a40 !important;
+    }
+
+    .container {
+        margin-top: 80px; /* Increased margin to accommodate navbar */
+    }
+
+    .img-container {
+        margin-bottom: 40px;
+        border: 1px solid #444;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: row;
+    }
+
+    .img-container img {
+        width: 60%;
+        border-right: 1px solid #444;
+    }
+
+    .img-description {
+        padding: 20px;
+        text-align: left;
+        color: #ddd;
+        background-color: #282c34;
+        flex: 1;
+        font-size: 18px;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 36px;
+        color: black;
+        margin-bottom: 30px;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+<script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+<script>
+    function goBack() {
+        window.location.href = "project.html";
+    }
+</script>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">PROJECT - System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <button class="nav-link btn btn-link" onclick="goBack()">Back</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="section-title">System Project Screenshots</div>
+
+        <div class="img-container">
+            <img src="register.jpg" alt="Screenshot 1">
+            <p class="img-description">Here you can register an account and choose if you are admin or user.</p>
+        </div>
+
+        <div class="img-container">
+            <img src="userlogin.jpg" alt="Screenshot 2">
+            <p class="img-description">This is in the log in and I`m trying to log in as user</p>
+        </div>
+        
+        <div class="img-container">
+            <img src="userdash.jpg" alt="Screenshot 3">
+            <p class="img-description">This is the dashboard of user where you cannot have an access in adding tenant and check out.</p>
+        </div>
+        
+        <div class="img-container">
+            <img src="adminlogin.jpg" alt="Screenshot 4">
+            <p class="img-description">Now I am trying to log in as a admin.</p>
+        </div>
+        
+        <div class="img-container">
+            <img src="logindash.jpg" alt="Screenshot 5">
+            <p class="img-description">This is the dashboard of admin and as you can see admin can access all part of this system.</p>
+        </div>
+        
+        <div class="img-container">
+            <img src="tenant.jpg" alt="Screenshot 6">
+            <p class="img-description">Here is the tenant section where you can see a tenant and add also a tenant.</p>
+        </div>
+
+        <div class="img-container">
+            <img src="room.jpg" alt="Screenshot 7">
+            <p class="img-description">Here is room section as you can see you can add and delete rooms</p>
+        </div>
+        
+        <div class="img-container">
+            <img src="checkin.jpg" alt="Screenshot 8">
+            <p class="img-description">Here you can check in tenant</p>
+        </div>
+        
+        <div class="img-container">
+            <img src="bill.jpg" alt="Screenshot 9">
+            <p class="img-description">Here you pay bills and have a receipt</p>
+        </div>
+        
+        <div class="img-container">
+            <img src="checkout.jpg" alt="Screenshot 10">
+            <p class="img-description">Here you can checkout tenants who already paid.</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

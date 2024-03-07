@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>The Trio - Personal Website</title>
+    <link href="bootstrap-5.3.2-dist/css/bootstrap.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
+    </head>
+<style>
+    .section-heading {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #343a40;
+}
+
+.contact-icons i {
+    font-size: 24px;
+    margin-right: 8px;
+}
+/* Custom CSS */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #343a40;
+    z-index: 1000;
+    padding: 15px 0; 
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+}
+
+
+
+        body {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding-top: 56px;
+            margin: 0;
+            zoom: 1.2;
+        }
+
+ 
+        section {
+            padding-top: 80px;
+        }
+
+
+        #interests {
+            
+            padding: 60px 20px;
+        }
+
+        #interests h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #343a40; 
+        }
+
+       
+        #contact {
+      x
+            padding: 60px 20px; 
+        }
+
+        #contact h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #343a40; 
+        }
+    </style>
+        <script>
+        function showSection(sectionId) {
+            
+            document.getElementById('about').style.display = 'none';
+            document.getElementById('interests').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+
+           
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">THE TRIO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"  aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);" onclick="showSection('about')">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);" onclick="showSection('interests')">Interests</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);" onclick="showSection('contact')">Contact</a>
+            </li>
+            <!-- PROJECT -->
+            <li class="nav-item">
+                <a class="nav-link" href="project.html">Project</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<section id="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2>About Me</h2>
+                <p>Hello! I'm Alberto C. Asuncion Jr., a 3rd Year IT student. I believe in continuous learning and enjoy tackling new challenges in IT deparment.</p>
+                <p>When I'm not coding, you can find me playing basketball or playing online games. I also love cooking and singing.</p>
+                <p>I`m 21 years old living in Kalabaza Aurora Isabela</p>
+            </div>
+            <div class="col-lg-6 text-center about-img-container">
+                <img src="berthings.jpeg" alt="Profile Picture" class="img-fluid rounded-circle">
+            </div>
+        <br>
+        <br>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6 ">
+            <h2>⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿</h2>
+                <p>Hello! I'm Keneth john Ancheta, a inspired 3rd year IT student.I believe that education is the key to success.</p>
+                <p>When I'm not coding, you can find me playing online games or sleeping. I also love eating and dancing.</p>
+                <p>I`m 21 years old living in Santa Maria,Cauayan City, Isabela</p>
+            </div>
+            <div class="col-lg-6 text-center about-img-container">
+                <img src="kinit.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+            <h2>⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿</h2>
+                <p>Hello! I'm Dandy Jouse T. Pascua, your future IT computer technician. I am hard working student and I'm skilled in repairing other computer parts. I believe put God first and trust the process.</p>
+                <p>When I'm not coding, you can find me in the party drinking Alcohol. I also love gsm blue, gin-bilog, and alfonso.</p>
+                <p>I am 20 years old, living in San Isidro, Cauayan, Isabela.</p>
+            </div>
+            <div class="col-lg-6 text-center about-img-container">
+                <img src="dandy.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="interests">
+    <div class="container">
+        <h2 class="section-heading text-uppercase">Interests</h2>
+        
+        <div class="row">
+           
+            <div class="col-lg-4">
+                <h4>Alberto - Hobbies</h4>
+                <ul>
+                    <li>Playing Basketball</li>
+                    <li>Playing Online Games</li>
+                    <li>Cooking</li>
+                  
+                </ul>
+            </div>
+            
+            
+            <div class="col-lg-4">
+                <h4>Keneth - Hobbies</h4>
+                <ul>
+                    <li>Playing Football</li>
+                    <li>Reading</li>
+                    <li>Painting</li>
+                   
+                </ul>
+            </div>
+            
+           
+            <div class="col-lg-4">
+                <h4>Dandy - Hobbies</h4>
+                <ul>
+                    <li>Playing Chess</li>
+                    <li>Gardening</li>
+                    <li>Yoga</li>
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section id="contact">
+    <div class="container">
+        <h2 class="section-heading text-uppercase">Contact Us</h2>
+        
+        <div class="row">
+           
+            <div class="col-lg-4">
+                <h4>Alberto</h4>
+                <p>
+                    <i class="fas fa-envelope"></i> Email: alberto08asuncion@gmail.com
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i> Phone: +639978425147
+                </p>
+                <p>
+                    <i class="fab fa-facebook"></i> Facebook: /alberto.asuncion.182
+                </p>
+            </div>
+            
+           
+            <div class="col-lg-4">
+                <h4>Keneth</h4>
+                <p>
+                    <i class="fas fa-envelope"></i> Email: anchetakenethjohn@gmail.com
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i> Phone: +639162840756
+                </p>
+                <p>
+                    <i class="fab fa-facebook"></i> Facebook: /keneth.ancheta
+                </p>
+            </div>
+            
+            
+            <div class="col-lg-4">
+                <h4>Dandy</h4>
+                <p>
+                    <i class="fas fa-envelope"></i> Email: dandy@example.com
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i> Phone: +123-456-7890
+                </p>
+                <p>
+                    <i class="fab fa-facebook"></i> Facebook: /dandy.profile
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<script src="bootstrap-5.3.2-dist/css/bootstrap.css" integrity="sha384-..." crossorigin="anonymous"></script>
+
+
+<script src="scripts.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Project - Personal Website</title>
+    <link href="bootstrap-5.3.2-dist/css/bootstrap.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-..." crossorigin="anonymous">
+    <style>
+        body {
+            background: url('bg.jpg') center/cover fixed no-repeat;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #343a40 !important;
+        }
+
+        .container {
+            margin-top: 80px; /* Increased margin to accommodate navbar */
+        }
+
+        .card {
+            background-color: #282c34;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-img-top {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .card-title {
+            color: #ffc107;
+            margin-top: 15px;
+        }
+
+        .card-text {
+            color: #ddd;
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .project-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            align-items: center;
+        }
+
+        .project-details-left,
+        .project-details-right {
+            flex: 1;
+        }
+
+        .project-details-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-details-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .project-details-table td {
+            padding: 15px;
+        }
+
+        .project-details-table td:last-child {
+            border-bottom: none; /* Remove border for the last cell */
+        }
+
+        .project-details-right img {
+            width: 100%;
+            height: auto;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: black;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">PROJECT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="perweb.html">Personal Website</a>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link btn btn-link" onclick="redirectToTodoList()">Go to To-Do List</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link btn btn-link" onclick="redirectToEcommerce()">E-commerce</button>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-link" href="system.html">System</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="section-title">Featured Projects</div>
+
+        <div class="project-details">
+            <div class="project-details-left">
+                <form class="project-details-form">
+                    <div class="mb-3">
+                        <label for="ecommerceName" class="form-label"><strong>Name</strong></label>
+                        <input type="text" class="form-control" id="ecommerceName" value="E-commerce" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ecommerceDescription" class="form-label"><strong>Description</strong></label>
+                        <input type="text" class="form-control" id="ecommerceDescription"
+                            value="An online shopping platform." readonly>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="redirectToEcommerce()">Show Details</button>
+
+                </form>
+            </div>
+            <div class="project-details-right">
+                <img src="featured.jpg" class="card-img-top" alt="E-commerce Image">
+            </div>
+        </div>
+
+        <div class="project-details">
+            <div class="project-details-left">
+                <form class="project-details-form">
+                    <div class="mb-3">
+                        <label for="todoName" class="form-label"><strong>Name</strong></label>
+                        <input type="text" class="form-control" id="todoName" value="To-Do List" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="todoDescription" class="form-label"><strong>Description</strong></label>
+                        <input type="text" class="form-control" id="todoDescription"
+                            value="A simple task management application." readonly>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="redirectToTodoList()">Show Details</button>
+                </form>
+            </div>
+            <div class="project-details-right">
+                <img src="todo.jpg.png" class="card-img-top" alt="To-Do List Image">
+            </div>
+        </div>
+
+        <div class="project-details">
+            <div class="project-details-left">
+                <form class="project-details-form">
+                    <div class="mb-3">
+                        <label for="systemName" class="form-label"><strong>Name</strong></label>
+                        <input type="text" class="form-control" id="systemName" value="System" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="systemDescription" class="form-label"><strong>Description</strong></label>
+                        <input type="text" class="form-control" id="systemDescription"
+                            value="A propose system that we created in our subject IT-313." readonly>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="redirectToSystem()">Show Details</button>
+                </form>
+            </div>
+            <div class="project-details-right">
+                <img src="logindash.jpg" class="card-img-top" alt="System Image">
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap-5.3.2-dist/css/bootstrap.css" integrity="sha384-..." crossorigin="anonymous"></script>
+    <!-- Include any additional scripts for the new project if needed -->
+
+<script>
+    function redirectToTodoList() {
+        window.location.href = "todolist.html";
+    }
+
+    function redirectToEcommerce() {
+        window.location.href = "ecommerce.html";
+    }
+
+    function redirectToSystem() {
+        window.location.href = "system.html";
+    }
+</script>
+</body>
+
+</html>
